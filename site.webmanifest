@@ -1,0 +1,12 @@
+{
+  "name": "Mzansi Insider",
+  "short_name": "Mzansi Insider",
+  "description": "South Africa's Career & Wealth Intelligence",
+  "icons": [
+    { "src": "icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone"
+}
