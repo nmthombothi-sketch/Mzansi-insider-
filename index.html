@@ -5,13 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mzansi Insider — South Africa's Career & Wealth Intelligence</title>
   <meta name="description" content="Jobs, salaries, bursaries, learnerships, career guides, and celebrity net worth — South Africa's definitive career and wealth resource.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://mzansiinsider.co.za/">
+  
+  <!-- SEO: Open Graph & Social Media Meta Tags (Crucial for social sharing traffic) -->
+  <meta property="og:title" content="Mzansi Insider — South Africa's Career & Wealth Intelligence">
+  <meta property="og:description" content="Jobs, salaries, bursaries, learnerships, career guides, and celebrity net worth — South Africa's definitive career and wealth resource.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mzansiinsider.co.za/">
+  <meta property="og:image" content="https://mzansiinsider.co.za/og-image.jpg">
+  <meta property="og:site_name" content="Mzansi Insider">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicons -->
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="canonical" href="https://mzansiinsider.co.za/index.html">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <!-- SEO: Organization & WebSite Schema (Establishes E-E-A-T and enables Sitelinks Searchbox) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://mzansiinsider.co.za/#website",
+        "url": "https://mzansiinsider.co.za/",
+        "name": "Mzansi Insider",
+        "description": "South Africa's definitive career and wealth resource.",
+        "publisher": { "@id": "https://mzansiinsider.co.za/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://mzansiinsider.co.za/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://mzansiinsider.co.za/#organization",
+        "name": "Mzansi Insider (Pty) Ltd",
+        "url": "https://mzansiinsider.co.za/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mzansiinsider.co.za/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "sameAs": [
+          "https://www.facebook.com/mzansiinsider",
+          "https://twitter.com/mzansiinsider",
+          "https://www.linkedin.com/company/mzansi-insider"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -20,20 +71,25 @@
     <div class="masthead-inner">
       <div class="masthead-top">
         <div class="masthead-date" id="live-date"></div>
-        <div class="logo">
+        <!-- UX/SEO: Logo must be a link back to the homepage -->
+        <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
           <div class="logo-name">Mzansi <em>Insider</em></div>
           <div class="logo-rule"></div>
           <div class="logo-sub">South Africa's Career &amp; Wealth Intelligence</div>
-        </div>
+        </a>
       </div>
-      <nav class="nav-bar">
-        <a href="index.html" class="active">Home</a><a href="salaries.html">Salaries</a><a href="bursaries.html">Bursaries</a><a href="careers.html">Careers</a><a href="networth.html">Net Worth</a><a href="jobs.html">Jobs</a>
+      <nav class="nav-bar" aria-label="Main Navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="salaries.html">Salaries</a>
+        <a href="bursaries.html">Bursaries</a>
+        <a href="careers.html">Careers</a>
+        <a href="networth.html">Net Worth</a>
+        <a href="jobs.html">Jobs</a>
       </nav>
     </div>
   </header>
 
-  <div class="wrap">
-  </div>
+  <div class="wrap"></div>
 
   <!-- TAGLINE STRIP -->
   <div class="tagline-strip">
@@ -45,142 +101,144 @@
 
       <!-- HOMEPAGE HERO GRID -->
       <div style="display:grid; grid-template-columns: 1fr; gap:0; border-top:3px solid var(--black); border-bottom:2px solid var(--black); margin-bottom:40px;">
-
-        <!-- LEAD -->
         <div style="padding:28px 0;">
-          <span class="eyebrow">Featured</span>
-          <h1 class="hl-xl" style="font-size:clamp(26px,3.5vw,44px);"><a href="report/highest-paying-careers-south-africa-2026.html" style="text-decoration:none;">South Africa's 10 Highest-Paying Careers in 2026 — And What It Really Takes to Get There</a></h1>
-          <p class="deck" style="font-size:17px; margin-top:12px;">From specialist surgeons and airline captains to actuaries and senior engineers — we mapped the salaries, qualifications, and paths that lead to the top of South Africa's income ladder.</p>
-          <div class="meta" style="margin-top:16px;">
-            <strong>MzansiInsider</strong>
-            <span>Updated June 2026</span>
-            <a href="report/highest-paying-careers-south-africa-2026.html" style="font-family:'IBM Plex Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; text-decoration:underline; text-underline-offset:3px;">Read the Report →</a>
+          <span class="eyebrow">Featured Report</span>
+          <h1 class="hl-xl" style="font-size:clamp(26px,3.5vw,44px); margin: 8px 0 12px 0;">
+            <a href="report/highest-paying-careers-south-africa-2026.html" style="text-decoration:none; color: inherit;">South Africa's 10 Highest-Paying Careers in 2026 — And What It Really Takes to Get There</a>
+          </h1>
+          <p class="deck" style="font-size:17px; margin-top:12px; line-height: 1.6;">From specialist surgeons and airline captains to actuaries and senior engineers — we mapped the salaries, qualifications, and paths that lead to the top of South Africa's income ladder.</p>
+          <div class="meta" style="margin-top:16px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--mid, #666);">
+            <strong>Mzansi Insider</strong>
+            <span>•</span>
+            <span>Updated September 2026</span>
+            <span>•</span>
+            <a href="report/highest-paying-careers-south-africa-2026.html" style="font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; text-decoration:underline; text-underline-offset:3px; color: var(--black, #000);">Read the Report →</a>
           </div>
         </div>
-
       </div>
 
       <!-- JOBS BOARD BANNER -->
-      <a href="jobs.html" style="text-decoration:none; color:inherit;">
-        <div style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; border:2px solid var(--black); padding:20px 24px; margin-bottom:40px;">
+      <a href="jobs.html" style="text-decoration:none; color:inherit; display: block;">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; border:2px solid var(--black); padding:20px 24px; margin-bottom:40px; transition: background 0.2s;" onmouseover="this.style.background='#f9f9f9'" onmouseout="this.style.background='transparent'">
           <div>
-            <span class="page-hero-label" style="margin-bottom:4px;">New &middot; Updated Daily</span>
-            <div style="font-family:'Playfair Display',serif; font-size:22px; font-weight:700;">Live Jobs Board — Real vacancies, refreshed every day</div>
+            <span class="page-hero-label" style="margin-bottom:4px; display: inline-block; background: #e6f4ea; color: #137333; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">New · Updated Daily</span>
+            <div style="font-family:'Playfair Display',serif; font-size:22px; font-weight:700; margin-top: 8px;">Live Jobs Board — Real vacancies, refreshed every day</div>
           </div>
-          <span style="font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; text-decoration:underline; text-underline-offset:3px; white-space:nowrap;">Browse Jobs →</span>
+          <span style="font-family:'IBM Plex Sans',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; text-decoration:underline; text-underline-offset:4px; white-space:nowrap;">Browse Jobs →</span>
         </div>
       </a>
 
       <!-- SECTION GRID: 4 PILLARS -->
-      <div class="four-col-grid home-grid" style="border-top:2px solid var(--black); margin-bottom:48px;">
-
+      <div class="four-col-grid home-grid" style="border-top:2px solid var(--black); margin-bottom:48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0;">
+        
         <!-- SALARIES -->
-        <div class="home-col" style="border-right:1px solid var(--rule);">
-          <div class="sec-head" style="border-top:none;"><h2>💼 Salaries</h2></div>
-          <ul class="home-list">
-            <li><a href="salary/software-engineer-south-africa.html">Software Engineer →</a><span>R264k – R1.2m p.a.</span></li>
-            <li><a href="salary/accountant-south-africa.html">Chartered Accountant →</a><span>R610k – R1.2m p.a.</span></li>
-            <li><a href="salary/actuary-south-africa.html">Actuary →</a><span>R420k – R1.9m p.a.</span></li>
+        <div class="home-col" style="padding: 24px; border-right:1px solid var(--rule, #ddd); border-bottom: 1px solid var(--rule, #ddd);">
+          <div class="sec-head" style="border-top:none; margin-bottom: 16px;"><h2 style="font-size: 20px;">💼 Salaries</h2></div>
+          <ul class="home-list" style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline;"><a href="salary/software-engineer-south-africa.html" style="text-decoration: none; color: inherit; font-weight: 500;">Software Engineer</a> <span style="font-size: 13px; color: #666;">R264k – R1.2m</span></li>
+            <li style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline;"><a href="salary/accountant-south-africa.html" style="text-decoration: none; color: inherit; font-weight: 500;">Chartered Accountant</a> <span style="font-size: 13px; color: #666;">R610k – R1.2m</span></li>
+            <li style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline;"><a href="salary/actuary-south-africa.html" style="text-decoration: none; color: inherit; font-weight: 500;">Actuary</a> <span style="font-size: 13px; color: #666;">R420k – R1.9m</span></li>
           </ul>
-          <a href="salaries.html" class="home-more">All Salaries →</a>
+          <a href="salaries.html" class="home-more" style="display: inline-block; margin-top: 16px; font-weight: 600; text-decoration: none; color: inherit;">All Salaries →</a>
         </div>
 
         <!-- BURSARIES -->
-        <div class="home-col" style="border-right:1px solid var(--rule);">
-          <div class="sec-head" style="border-top:none;"><h2>🎓 Bursaries</h2></div>
-          <ul class="home-list">
-            <li><a href="bursary/nsfas.html">NSFAS →</a><span>All qualifying students</span></li>
-            <li><a href="bursary/sasol-bursary-programme.html">Sasol Bursary →</a><span>Engineering &amp; science</span></li>
-            <li><a href="learnerships.html">Learnerships →</a><span>25 paid work-based routes</span></li>
+        <div class="home-col" style="padding: 24px; border-right:1px solid var(--rule, #ddd); border-bottom: 1px solid var(--rule, #ddd);">
+          <div class="sec-head" style="border-top:none; margin-bottom: 16px;"><h2 style="font-size: 20px;">🎓 Bursaries</h2></div>
+          <ul class="home-list" style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline;"><a href="bursary/nsfas.html" style="text-decoration: none; color: inherit; font-weight: 500;">NSFAS</a> <span style="font-size: 13px; color: #666;">All qualifying</span></li>
+            <li style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline;"><a href="bursary/sasol-bursary-programme.html" style="text-decoration: none; color: inherit; font-weight: 500;">Sasol Bursary</a> <span style="font-size: 13px; color: #666;">Engineering & science</span></li>
+            <li style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline;"><a href="learnerships.html" style="text-decoration: none; color: inherit; font-weight: 500;">Learnerships</a> <span style="font-size: 13px; color: #666;">25 paid routes</span></li>
           </ul>
-          <a href="bursaries.html" class="home-more">All Bursaries →</a>
+          <a href="bursaries.html" class="home-more" style="display: inline-block; margin-top: 16px; font-weight: 600; text-decoration: none; color: inherit;">All Bursaries →</a>
         </div>
 
         <!-- CAREERS -->
-        <div class="home-col" style="border-right:1px solid var(--rule);">
-          <div class="sec-head" style="border-top:none;"><h2>📚 Careers</h2></div>
-          <ul class="home-list">
-            <li><a href="article-software-engineer.html">Become a Software Engineer →</a><span>No degree required</span></li>
-            <li><a href="article-cv.html">The CV That Gets Interviews →</a><span>Job search</span></li>
-            <li><a href="sidehustles.html">Side Hustles →</a><span>6 realistic income ideas</span></li>
+        <div class="home-col" style="padding: 24px; border-right:1px solid var(--rule, #ddd); border-bottom: 1px solid var(--rule, #ddd);">
+          <div class="sec-head" style="border-top:none; margin-bottom: 16px;"><h2 style="font-size: 20px;">📚 Careers</h2></div>
+          <ul class="home-list" style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline;"><a href="article-software-engineer.html" style="text-decoration: none; color: inherit; font-weight: 500;">Become a Software Engineer</a> <span style="font-size: 13px; color: #666;">No degree req.</span></li>
+            <li style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline;"><a href="article-cv.html" style="text-decoration: none; color: inherit; font-weight: 500;">The CV That Gets Interviews</a> <span style="font-size: 13px; color: #666;">Job search</span></li>
+            <li style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline;"><a href="sidehustles.html" style="text-decoration: none; color: inherit; font-weight: 500;">Side Hustles</a> <span style="font-size: 13px; color: #666;">6 realistic ideas</span></li>
           </ul>
-          <a href="careers.html" class="home-more">All Career Guides →</a>
+          <a href="careers.html" class="home-more" style="display: inline-block; margin-top: 16px; font-weight: 600; text-decoration: none; color: inherit;">All Career Guides →</a>
         </div>
 
         <!-- NET WORTH -->
-        <div class="home-col">
-          <div class="sec-head" style="border-top:none;"><h2>👑 Net Worth</h2></div>
-          <ul class="home-list networth-list">
-            <li><a href="networth.html">Elon Musk</a><span>SA-born · Tesla, SpaceX</span><strong>$1.3tn</strong></li>
-            <li><a href="networth/johann-rupert.html">Johann Rupert</a><span>Luxury · Richemont</span><strong>$16.1bn</strong></li>
-            <li><a href="networth/patrice-motsepe.html">Patrice Motsepe</a><span>Mining · ARM</span><strong>$4.3bn</strong></li>
+        <div class="home-col" style="padding: 24px; border-bottom: 1px solid var(--rule, #ddd);">
+          <div class="sec-head" style="border-top:none; margin-bottom: 16px;"><h2 style="font-size: 20px;">👑 Net Worth</h2></div>
+          <ul class="home-list networth-list" style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 12px;"><a href="networth/elon-musk.html" style="text-decoration: none; color: inherit; font-weight: 600; display: block;">Elon Musk</a><span style="font-size: 13px; color: #666; display: block;">SA-born · Tesla, SpaceX</span><strong style="color: #137333;">$1.3tn</strong></li>
+            <li style="margin-bottom: 12px;"><a href="networth/johann-rupert.html" style="text-decoration: none; color: inherit; font-weight: 600; display: block;">Johann Rupert</a><span style="font-size: 13px; color: #666; display: block;">Luxury · Richemont</span><strong style="color: #137333;">$16.1bn</strong></li>
+            <li style="margin-bottom: 12px;"><a href="networth/patrice-motsepe.html" style="text-decoration: none; color: inherit; font-weight: 600; display: block;">Patrice Motsepe</a><span style="font-size: 13px; color: #666; display: block;">Mining · ARM</span><strong style="color: #137333;">$4.3bn</strong></li>
           </ul>
-          <a href="networth.html" class="home-more">Full List →</a>
+          <a href="networth.html" class="home-more" style="display: inline-block; margin-top: 16px; font-weight: 600; text-decoration: none; color: inherit;">Full List →</a>
         </div>
-
       </div>
 
       <!-- CAREER GUIDES + SIDEBAR -->
-      <div class="two-col" style="padding-top:8px; border-top:2px solid var(--black); margin-bottom:48px;">
+      <div class="two-col" style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; padding-top:8px; border-top:2px solid var(--black); margin-bottom:48px;">
         <div>
-          <div class="sec-head"><h2>Career Guides</h2><span>Expert advice for every stage</span></div>
+          <div class="sec-head" style="margin-bottom: 24px;"><h2>Career Guides</h2><span style="color: #666; font-size: 15px;">Expert advice for every stage</span></div>
 
-          <article style="border-bottom:1px solid var(--rule); padding-bottom:28px; margin-bottom:28px;">
-            <span class="eyebrow">How-To Guide</span>
-            <h2 class="hl-lg"><a href="article-software-engineer.html">How to Become a Software Engineer in South Africa: The Complete 2026 Roadmap</a></h2>
-            <p class="deck">From matric to mid-level developer in 18 months — what to study, which bootcamps are worth it, and how to land your first R40,000/month role without a university degree.</p>
-            <div class="meta" style="margin-top:12px;">
-              <strong>MzansiInsider</strong><span>10 min read</span>
+          <article style="border-bottom:1px solid var(--rule, #ddd); padding-bottom:28px; margin-bottom:28px;">
+            <span class="eyebrow" style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #666;">How-To Guide</span>
+            <h2 class="hl-lg" style="font-size: 24px; margin: 8px 0;"><a href="article-software-engineer.html" style="text-decoration: none; color: inherit;">How to Become a Software Engineer in South Africa: The Complete 2026 Roadmap</a></h2>
+            <p class="deck" style="font-size:16px; line-height: 1.6; color: #444;">From matric to mid-level developer in 18 months — what to study, which bootcamps are worth it, and how to land your first R40,000/month role without a university degree.</p>
+            <div class="meta" style="margin-top:12px; font-size: 13px; color: #666;">
+              <strong>Mzansi Insider</strong> <span>•</span> <span>10 min read</span>
             </div>
           </article>
 
-          <article style="border-bottom:1px solid var(--rule); padding-bottom:28px; margin-bottom:28px;">
-            <span class="eyebrow">CV &amp; Job Search</span>
-            <h2 class="hl-md"><a href="article-cv.html">The South African CV That Actually Gets Interviews in 2026</a></h2>
-            <p class="deck" style="font-size:15px;">Recruiters at SA's top firms say 80% of CVs fail before the first page. Here is the exact structure and language that gets callbacks.</p>
-            <div class="meta"><strong>MzansiInsider</strong><span>7 min read</span></div>
+          <article style="border-bottom:1px solid var(--rule, #ddd); padding-bottom:28px; margin-bottom:28px;">
+            <span class="eyebrow" style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #666;">CV &amp; Job Search</span>
+            <h2 class="hl-md" style="font-size: 20px; margin: 8px 0;"><a href="article-cv.html" style="text-decoration: none; color: inherit;">The South African CV That Actually Gets Interviews in 2026</a></h2>
+            <p class="deck" style="font-size:15px; line-height: 1.6; color: #444;">Recruiters at SA's top firms say 80% of CVs fail before the first page. Here is the exact structure and language that gets callbacks.</p>
+            <div class="meta" style="margin-top:12px; font-size: 13px; color: #666;"><strong>Mzansi Insider</strong> <span>•</span> <span>7 min read</span></div>
           </article>
 
-          <article style="border-bottom:1px solid var(--rule); padding-bottom:28px; margin-bottom:28px;">
-            <span class="eyebrow">Salary Negotiation</span>
-            <h2 class="hl-md"><a href="article-salary-negotiation.html">How to Negotiate Your Salary in South Africa — Scripts, Tactics and What Not to Say</a></h2>
-            <p class="deck" style="font-size:15px;">Most South Africans leave 15–30% of potential earnings on the table at the offer stage. A step-by-step framework to close the gap.</p>
-            <div class="meta"><strong>MzansiInsider</strong><span>8 min read</span></div>
+          <article style="border-bottom:1px solid var(--rule, #ddd); padding-bottom:28px; margin-bottom:28px;">
+            <span class="eyebrow" style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #666;">Salary Negotiation</span>
+            <h2 class="hl-md" style="font-size: 20px; margin: 8px 0;"><a href="article-salary-negotiation.html" style="text-decoration: none; color: inherit;">How to Negotiate Your Salary in South Africa — Scripts, Tactics and What Not to Say</a></h2>
+            <p class="deck" style="font-size:15px; line-height: 1.6; color: #444;">Most South Africans leave 15–30% of potential earnings on the table at the offer stage. A step-by-step framework to close the gap.</p>
+            <div class="meta" style="margin-top:12px; font-size: 13px; color: #666;"><strong>Mzansi Insider</strong> <span>•</span> <span>8 min read</span></div>
           </article>
 
           <article>
-            <span class="eyebrow">Finance</span>
-            <h2 class="hl-md"><a href="article-ca-sa.html">How to Become a CA(SA): Timeline, Cost, and Whether It's Still Worth It</a></h2>
-            <div class="meta"><strong>MzansiInsider</strong><span>6 min read</span></div>
+            <span class="eyebrow" style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #666;">Finance</span>
+            <h2 class="hl-md" style="font-size: 20px; margin: 8px 0;"><a href="article-ca-sa.html" style="text-decoration: none; color: inherit;">How to Become a CA(SA): Timeline, Cost, and Whether It's Still Worth It</a></h2>
+            <div class="meta" style="margin-top:12px; font-size: 13px; color: #666;"><strong>Mzansi Insider</strong> <span>•</span> <span>6 min read</span></div>
           </article>
-
         </div>
+
         <!-- SIDEBAR -->
         <aside>
-          <div class="sidebar-widget">
-            <div class="sidebar-title">Popular Bursaries</div>
-            <ul class="sidebar-list">
-              <li><a href="bursary/nsfas.html">NSFAS →</a></li>
-              <li><a href="bursary/sasol-bursary-programme.html">Sasol Bursary →</a></li>
-              <li><a href="bursary/funza-lushaka-bursary.html">Funza Lushaka Teaching →</a></li>
-              <li><a href="bursary/saica-thuthuka-bursary.html">SAICA Thuthuka →</a></li>
+          <div class="sidebar-widget" style="margin-bottom: 32px;">
+            <div class="sidebar-title" style="font-size: 16px; font-weight: 700; border-bottom: 2px solid var(--black); padding-bottom: 8px; margin-bottom: 16px;">Popular Bursaries</div>
+            <ul class="sidebar-list" style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 10px;"><a href="bursary/nsfas.html" style="text-decoration: none; color: inherit; font-weight: 500;">NSFAS →</a></li>
+              <li style="margin-bottom: 10px;"><a href="bursary/sasol-bursary-programme.html" style="text-decoration: none; color: inherit; font-weight: 500;">Sasol Bursary →</a></li>
+              <li style="margin-bottom: 10px;"><a href="bursary/funza-lushaka-bursary.html" style="text-decoration: none; color: inherit; font-weight: 500;">Funza Lushaka Teaching →</a></li>
+              <li style="margin-bottom: 10px;"><a href="bursary/saica-thuthuka-bursary.html" style="text-decoration: none; color: inherit; font-weight: 500;">SAICA Thuthuka →</a></li>
             </ul>
           </div>
-          <div class="sidebar-widget">
-            <div class="sidebar-title">Market Reports</div>
-            <ul class="sidebar-list">
-              <li><a href="report/highest-paying-careers-south-africa-2026.html">Highest-Paying Careers 2026 →</a></li>
-              <li><a href="report/most-in-demand-skills-south-africa-2026.html">Most In-Demand Skills →</a></li>
-              <li><a href="report/fastest-growing-careers-south-africa-2026.html">Fastest-Growing Careers →</a></li>
+          
+          <div class="sidebar-widget" style="margin-bottom: 32px;">
+            <div class="sidebar-title" style="font-size: 16px; font-weight: 700; border-bottom: 2px solid var(--black); padding-bottom: 8px; margin-bottom: 16px;">Market Reports</div>
+            <ul class="sidebar-list" style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 10px;"><a href="report/highest-paying-careers-south-africa-2026.html" style="text-decoration: none; color: inherit; font-weight: 500;">Highest-Paying Careers 2026 →</a></li>
+              <li style="margin-bottom: 10px;"><a href="report/most-in-demand-skills-south-africa-2026.html" style="text-decoration: none; color: inherit; font-weight: 500;">Most In-Demand Skills →</a></li>
+              <li style="margin-bottom: 10px;"><a href="report/fastest-growing-careers-south-africa-2026.html" style="text-decoration: none; color: inherit; font-weight: 500;">Fastest-Growing Careers →</a></li>
             </ul>
           </div>
+          
           <div class="sidebar-widget">
-            <div class="sidebar-title">Quick Links</div>
-            <ul class="sidebar-list">
-              <li><a href="salaries.html">Salary Data →</a></li>
-              <li><a href="learnerships.html">Learnerships →</a></li>
-              <li><a href="sidehustles.html">Side Hustles →</a></li>
-              <li><a href="networth.html">SA Wealth Rankings →</a></li>
+            <div class="sidebar-title" style="font-size: 16px; font-weight: 700; border-bottom: 2px solid var(--black); padding-bottom: 8px; margin-bottom: 16px;">Quick Links</div>
+            <ul class="sidebar-list" style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 10px;"><a href="salaries.html" style="text-decoration: none; color: inherit; font-weight: 500;">Salary Data →</a></li>
+              <li style="margin-bottom: 10px;"><a href="learnerships.html" style="text-decoration: none; color: inherit; font-weight: 500;">Learnerships →</a></li>
+              <li style="margin-bottom: 10px;"><a href="sidehustles.html" style="text-decoration: none; color: inherit; font-weight: 500;">Side Hustles →</a></li>
+              <li style="margin-bottom: 10px;"><a href="networth.html" style="text-decoration: none; color: inherit; font-weight: 500;">SA Wealth Rankings →</a></li>
             </ul>
           </div>
         </aside>
@@ -189,8 +247,7 @@
     </div>
   </main>
 
-  <div class="wrap">
-  </div>
+  <div class="wrap"></div>
 
   <footer>
     <div class="footer-inner">
@@ -199,49 +256,49 @@
           <div class="footer-logo">Mzansi <em>Insider</em></div>
           <div class="footer-sub">Career &amp; Wealth Intelligence</div>
         </div>
-        <div class="footer-cols">
+        <div class="footer-cols" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px; margin-top: 24px;">
           <div class="footer-col">
-            <div class="footer-col-head">Sections</div>
-            
-            <a href="salaries.html">Salaries</a>
-            <a href="bursaries.html">Bursaries</a>
-            <a href="learnerships.html">Learnerships</a>
-            <a href="careers.html">Career Guides</a>
-            <a href="sidehustles.html">Side Hustles</a>
-            <a href="networth.html">Net Worth</a>
-            <a href="reports.html">Market Reports</a>
+            <div class="footer-col-head" style="font-weight: 700; margin-bottom: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;">Sections</div>
+            <a href="salaries.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Salaries</a>
+            <a href="bursaries.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Bursaries</a>
+            <a href="learnerships.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Learnerships</a>
+            <a href="careers.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Career Guides</a>
+            <a href="sidehustles.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Side Hustles</a>
+            <a href="networth.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Net Worth</a>
+            <a href="reports.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Market Reports</a>
           </div>
           <div class="footer-col">
-            <div class="footer-col-head">Bursaries</div>
-            <a href="bursaries-database.html">Search Database</a>
-            <a href="bursaries.html">Engineering</a>
-            <a href="bursaries.html">STEM Fields</a>
-            <a href="bursaries.html">Commerce</a>
-            <a href="bursaries.html">Law</a>
-            <a href="bursaries.html">NSFAS</a>
+            <div class="footer-col-head" style="font-weight: 700; margin-bottom: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;">Bursaries</div>
+            <a href="bursaries-database.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Search Database</a>
+            <a href="bursaries.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Engineering</a>
+            <a href="bursaries.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">STEM Fields</a>
+            <a href="bursaries.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Commerce</a>
+            <a href="bursaries.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Law</a>
+            <a href="bursary/nsfas.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">NSFAS</a>
           </div>
           <div class="footer-col">
-            <div class="footer-col-head">Company</div>
-            <a href="#">About</a>
-            <a href="#">Advertise</a>
-            <a href="#">Post a Job</a>
-            <a href="#">Contact</a>
+            <div class="footer-col-head" style="font-weight: 700; margin-bottom: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;">Company</div>
+            <!-- CRITICAL FOR ADSENSE: These MUST be real pages with actual content, not '#' -->
+            <a href="about.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">About Us</a>
+            <a href="advertise.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Advertise</a>
+            <a href="contact.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Contact</a>
           </div>
           <div class="footer-col">
-            <div class="footer-col-head">Legal</div>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">POPIA Notice</a>
-            <a href="#">Sitemap</a>
+            <div class="footer-col-head" style="font-weight: 700; margin-bottom: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;">Legal</div>
+            <!-- CRITICAL FOR ADSENSE: These MUST be real pages with actual content, not '#' -->
+            <a href="privacy.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Privacy Policy</a>
+            <a href="terms.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Terms of Use</a>
+            <a href="popia.html" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">POPIA Notice</a>
+            <a href="sitemap.xml" style="display: block; margin-bottom: 8px; text-decoration: none; color: inherit; font-size: 14px;">Sitemap</a>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
+      <div class="footer-bottom" style="border-top: 1px solid var(--rule, #ddd); margin-top: 32px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 13px; color: #666;">
         <span>© 2026 Mzansi Insider (Pty) Ltd. All rights reserved.</span>
-        <div>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">POPIA</a>
+        <div style="display: flex; gap: 16px;">
+          <a href="privacy.html" style="text-decoration: none; color: inherit;">Privacy</a>
+          <a href="terms.html" style="text-decoration: none; color: inherit;">Terms</a>
+          <a href="popia.html" style="text-decoration: none; color: inherit;">POPIA</a>
         </div>
       </div>
     </div>
@@ -250,7 +307,10 @@
   <script>
     const d = new Date();
     const opts = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
-    document.getElementById('live-date').textContent = d.toLocaleDateString('en-ZA', opts);
+    const dateEl = document.getElementById('live-date');
+    if (dateEl) {
+      dateEl.textContent = d.toLocaleDateString('en-ZA', opts);
+    }
   </script>
 </body>
 </html>
