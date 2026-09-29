@@ -25,20 +25,28 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
 
-  <!-- Pure CSS Fix for FAQ Toggle Icons (No JS needed, 100% reliable) -->
+  <!-- CRITICAL FIX: Pure CSS to force FAQ answers to show and toggle icons -->
   <style>
     details.faq-item summary {
       list-style: none;
       cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     details.faq-item summary::-webkit-details-marker {
       display: none;
     }
+    /* This forces the answer to display, overriding your style.css */
+    details.faq-item .faq-a,
+    details.faq-item[open] .faq-a {
+      display: block !important;
+    }
+    /* Auto-switching +/- icons */
     details.faq-item summary::after {
       content: '+';
       font-size: 20px;
       font-weight: 300;
-      margin-left: auto;
       display: block;
     }
     details.faq-item[open] summary::after {
@@ -246,28 +254,28 @@
           <!-- FIXED: Pure CSS FAQ Toggle (No JS needed, 100% reliable +/- switching) -->
           <div class="faq">
             <details class="faq-item" style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
-              <summary class="faq-q" style="font-weight:600; display:flex; justify-content:space-between; align-items:center;">
+              <summary class="faq-q" style="font-weight:600;">
                 What is AB de Villiers' net worth in 2026?
               </summary>
               <div class="faq-a" style="margin-top:8px; color:#444;">AB de Villiers' net worth is estimated at around $20 million (about R265 million) in 2026, built on international cricket, the IPL, and endorsements. Figures are aggregated estimates.</div>
             </details>
 
             <details class="faq-item" style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
-              <summary class="faq-q" style="font-weight:600; display:flex; justify-content:space-between; align-items:center;">
+              <summary class="faq-q" style="font-weight:600;">
                 How much did AB de Villiers earn in the IPL?
               </summary>
               <div class="faq-a" style="margin-top:8px; color:#444;">He earned over R223 million across his IPL career with Royal Challengers Bangalore, making him the highest-paid South African player in IPL history.</div>
             </details>
 
             <details class="faq-item" style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
-              <summary class="faq-q" style="font-weight:600; display:flex; justify-content:space-between; align-items:center;">
+              <summary class="faq-q" style="font-weight:600;">
                 How did AB de Villiers make his money?
               </summary>
               <div class="faq-a" style="margin-top:8px; color:#444;">Through a 15-year international cricket career, a record-breaking IPL run, franchise T20 leagues, commentary, and endorsements with brands like Puma and Montblanc.</div>
             </details>
 
             <details class="faq-item" style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
-              <summary class="faq-q" style="font-weight:600; display:flex; justify-content:space-between; align-items:center;">
+              <summary class="faq-q" style="font-weight:600;">
                 Is AB de Villiers the richest South African cricketer?
               </summary>
               <div class="faq-a" style="margin-top:8px; color:#444;">He is among the very richest, largely thanks to being the highest-earning South African in IPL history, alongside his lucrative endorsements and post-playing ventures.</div>
