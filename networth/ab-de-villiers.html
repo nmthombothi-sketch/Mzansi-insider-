@@ -25,6 +25,27 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
 
+  <!-- Pure CSS Fix for FAQ Toggle Icons (No JS needed, 100% reliable) -->
+  <style>
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    details.faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    details.faq-item summary::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 300;
+      margin-left: auto;
+      display: block;
+    }
+    details.faq-item[open] summary::after {
+      content: '−';
+    }
+  </style>
+
   <!-- SEO: Enhanced JSON-LD Schema (Breadcrumb + Person + FAQ) -->
   <script type="application/ld+json">
   [
@@ -179,13 +200,32 @@
           </ul>
 
           <div class="sec-head" style="margin-top:32px;"><h2>Career History</h2><span>The road to the fortune</span></div>
+          <!-- FIXED: Added align-items: flex-start and flex-shrink: 0 to prevent date overlap -->
           <div class="steps">
-            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px;"><div class="step-n" style="font-weight:700; color:#0066cc; min-width:60px;">1984</div><div class="step-t">Born in Pretoria; displayed multi-sport prodigy talent at school level.</div></div>
-            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px;"><div class="step-n" style="font-weight:700; color:#0066cc; min-width:60px;">2004</div><div class="step-t">Makes his Test debut for South Africa, beginning a 15-year international career.</div></div>
-            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px;"><div class="step-n" style="font-weight:700; color:#0066cc; min-width:60px;">2008</div><div class="step-t">Joins the IPL, beginning what would become his most lucrative income stream.</div></div>
-            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px;"><div class="step-n" style="font-weight:700; color:#0066cc; min-width:60px;">2010s</div><div class="step-t">Earns the moniker 'Mr 360', setting world records for the fastest ODI fifty, century, and 150.</div></div>
-            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px;"><div class="step-n" style="font-weight:700; color:#0066cc; min-width:60px;">2018</div><div class="step-t">Shock retirement from international cricket to prioritize family and franchise cricket.</div></div>
-            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px;"><div class="step-n" style="font-weight:700; color:#0066cc; min-width:60px;">2020s–2026</div><div class="step-t">Continues to earn through franchise leagues, high-profile commentary, and enduring brand endorsements.</div></div>
+            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px; align-items: flex-start;">
+              <div class="step-n" style="font-weight:700; color:#0066cc; min-width:80px; flex-shrink: 0;">1984</div>
+              <div class="step-t">Born in Pretoria; displayed multi-sport prodigy talent at school level.</div>
+            </div>
+            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px; align-items: flex-start;">
+              <div class="step-n" style="font-weight:700; color:#0066cc; min-width:80px; flex-shrink: 0;">2004</div>
+              <div class="step-t">Makes his Test debut for South Africa, beginning a 15-year international career.</div>
+            </div>
+            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px; align-items: flex-start;">
+              <div class="step-n" style="font-weight:700; color:#0066cc; min-width:80px; flex-shrink: 0;">2008</div>
+              <div class="step-t">Joins the IPL, beginning what would become his most lucrative income stream.</div>
+            </div>
+            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px; align-items: flex-start;">
+              <div class="step-n" style="font-weight:700; color:#0066cc; min-width:80px; flex-shrink: 0;">2010s</div>
+              <div class="step-t">Earns the moniker 'Mr 360', setting world records for the fastest ODI fifty, century, and 150.</div>
+            </div>
+            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px; align-items: flex-start;">
+              <div class="step-n" style="font-weight:700; color:#0066cc; min-width:80px; flex-shrink: 0;">2018</div>
+              <div class="step-t">Shock retirement from international cricket to prioritize family and franchise cricket.</div>
+            </div>
+            <div class="step-row" style="display:flex; gap:16px; margin-bottom:16px; align-items: flex-start;">
+              <div class="step-n" style="font-weight:700; color:#0066cc; min-width:80px; flex-shrink: 0;">2020–2026</div>
+              <div class="step-t">Continues to earn through franchise leagues, high-profile commentary, and enduring brand endorsements.</div>
+            </div>
           </div>
 
           <!-- MONETIZATION: High-CPC Cross-link Box -->
@@ -203,36 +243,32 @@
 
           <div class="sec-head" style="margin-top:32px;"><h2>Frequently Asked Questions</h2></div>
           
-          <!-- UX/SEO: Native HTML <details> for FAQs -->
+          <!-- FIXED: Pure CSS FAQ Toggle (No JS needed, 100% reliable +/- switching) -->
           <div class="faq">
             <details class="faq-item" style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
-              <summary class="faq-q" style="font-weight:600; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              <summary class="faq-q" style="font-weight:600; display:flex; justify-content:space-between; align-items:center;">
                 What is AB de Villiers' net worth in 2026?
-                <span style="font-size:20px;">+</span>
               </summary>
               <div class="faq-a" style="margin-top:8px; color:#444;">AB de Villiers' net worth is estimated at around $20 million (about R265 million) in 2026, built on international cricket, the IPL, and endorsements. Figures are aggregated estimates.</div>
             </details>
 
             <details class="faq-item" style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
-              <summary class="faq-q" style="font-weight:600; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              <summary class="faq-q" style="font-weight:600; display:flex; justify-content:space-between; align-items:center;">
                 How much did AB de Villiers earn in the IPL?
-                <span style="font-size:20px;">+</span>
               </summary>
               <div class="faq-a" style="margin-top:8px; color:#444;">He earned over R223 million across his IPL career with Royal Challengers Bangalore, making him the highest-paid South African player in IPL history.</div>
             </details>
 
             <details class="faq-item" style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
-              <summary class="faq-q" style="font-weight:600; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              <summary class="faq-q" style="font-weight:600; display:flex; justify-content:space-between; align-items:center;">
                 How did AB de Villiers make his money?
-                <span style="font-size:20px;">+</span>
               </summary>
               <div class="faq-a" style="margin-top:8px; color:#444;">Through a 15-year international cricket career, a record-breaking IPL run, franchise T20 leagues, commentary, and endorsements with brands like Puma and Montblanc.</div>
             </details>
 
             <details class="faq-item" style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
-              <summary class="faq-q" style="font-weight:600; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              <summary class="faq-q" style="font-weight:600; display:flex; justify-content:space-between; align-items:center;">
                 Is AB de Villiers the richest South African cricketer?
-                <span style="font-size:20px;">+</span>
               </summary>
               <div class="faq-a" style="margin-top:8px; color:#444;">He is among the very richest, largely thanks to being the highest-earning South African in IPL history, alongside his lucrative endorsements and post-playing ventures.</div>
             </details>
@@ -314,18 +350,6 @@
     const d = new Date();
     var el = document.getElementById('live-date');
     if(el) el.textContent = d.toLocaleDateString('en-ZA', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
-    
-    // Optional: Simple styling for details/summary arrow toggle
-    document.querySelectorAll('details').forEach((detail) => {
-      detail.addEventListener('toggle', () => {
-        const summary = detail.querySelector('summary span');
-        if (detail.open) {
-          summary.textContent = '−';
-        } else {
-          summary.textContent = '+';
-        }
-      });
-    });
   </script>
 </body>
 </html>
