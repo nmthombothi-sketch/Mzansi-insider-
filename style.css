@@ -676,7 +676,6 @@ footer {
    PLATFORM v2 — breadcrumbs, calculators, search, badges
    ============================================================ */
 
-
 /* --- Breadcrumbs --- */
 .breadcrumb {
   font-family: 'IBM Plex Sans', sans-serif; font-size: 11px; font-weight: 500;
@@ -831,4 +830,92 @@ footer {
   .job-card-top { flex-direction:column; gap:4px; }
   .job-pills { gap:6px; }
   .job-pill { font-size:11px; padding:7px 11px; }
+}
+
+/* ============================================================
+   RECOMMENDED ADDITIONS FOR PERFECT HTML/CSS SYNC
+   ============================================================ */
+
+/* 1. Responsive Fact Band (Prevents text squishing on mobile devices) */
+@media (max-width: 700px) {
+  .fact-band { 
+    grid-template-columns: 1fr 1fr; 
+  } 
+  .fact-cell:nth-child(1), .fact-cell:nth-child(2) { 
+    border-bottom: 1px solid var(--rule); 
+  } 
+  .fact-cell:nth-child(2), .fact-cell:nth-child(3) { 
+    border-right: none; 
+  }
+}
+@media (max-width: 480px) {
+  .fact-band { 
+    grid-template-columns: 1fr; 
+  }
+  .fact-cell {
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .fact-cell:last-child {
+    border-bottom: none;
+  }
+}
+
+/* 2. Enhanced "Saved" State for Bursary Buttons (Clearer UX feedback) */
+.btn-save {
+  transition: all 0.2s ease-in-out;
+}
+.btn-save.saved { 
+  background: #e6f4ea !important; 
+  color: #1e7e34 !important; 
+  border-color: #1e7e34 !important; 
+}
+.btn-save.saved:hover { 
+  background: #d4edda !important; 
+}
+
+/* 3. Pure CSS FAQ Toggle Support 
+   (Ensures the modern <details> HTML method works perfectly with your design) */
+details.faq-item {
+  border-bottom: 1px solid var(--rule);
+}
+details.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 18px 0;
+  gap: 16px;
+}
+details.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+details.faq-item summary::after {
+  content: '+';
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+details.faq-item[open] summary::after {
+  content: '−';
+}
+details.faq-item .faq-a {
+  font-size: 15px;
+  color: #444;
+  padding: 0 0 20px;
+  display: block !important; /* Guarantees it shows, overriding any legacy JS conflicts */
+}
+
+/* 4. Database Card Hover Polish (Matches your premium aesthetic) */
+.db-card {
+  transition: border-color 0.15s, transform 0.15s;
+}
+.db-card:hover {
+  border-color: var(--black);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
